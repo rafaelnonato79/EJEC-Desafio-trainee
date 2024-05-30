@@ -1,0 +1,69 @@
+[data-menu="button"]{
+    display: none;
+}
+
+@media (max-width: 700px) {
+    .js [data-menu="button"]{
+        display: flex;
+        background: #06121E;
+        border: none;
+        padding: .5rem 1rem;
+        border-radius: 4px;
+        font-weight: bold;
+        color: #fff;
+        cursor: pointer;
+        margin-right: 20px;
+        position: relative;
+        z-index: 1000;
+        height: 48px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .js [data-menu="button"]::before{
+        margin-right: 4px;
+        content: '';
+        display: inline-block;
+        height: 5px;
+        width: 40px;
+        background: #fff;
+        box-shadow: 0 10px #fff, 0 -10px #fff;
+        transition: transform 0.3s;
+        border-radius: 4px;
+    }
+
+    .js [data-menu="list"]{
+        display: none;
+    }
+
+    .js [data-menu="list"].ativo{
+        display: flex;
+        flex-direction: column;
+        animation: showMenu .5s forwards;
+        position: absolute;
+        top:78px;
+        right: 0;
+        background: #06121E;
+        width: 214px;
+        height: 100vh;
+        z-index: 900;
+        align-items: center;
+        animation: show-right .5s forwards;
+    }
+
+    .js [data-menu="list"] li:first-child{
+        margin-top: 52px;
+    }
+
+    @keyframes show-right {
+        from{
+            opacity: 0;
+            transform: translateX(30px);
+        }
+        to{
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+    }
+}
