@@ -15,6 +15,7 @@ export default function carrouselBanner() {
         })
     }
 
+
     function setActiveDot(index) {
         dots.forEach((dot, i) => {
             dot.classList.toggle('active', i === index);
@@ -35,8 +36,8 @@ export default function carrouselBanner() {
         })
     });
 
-    setInterval(nextImage, 3000); // Troca de imagem a cada 3 segundos
-    showImage(indexImage); // Exibe a primeira imagem inicialmente
-    setActiveDot(indexImage); // Marca o primeiro ponto como ativo
+    setInterval(nextImage, 3000); 
+    showImage(indexImage); 
+    setActiveDot(indexImage); 
 }
 

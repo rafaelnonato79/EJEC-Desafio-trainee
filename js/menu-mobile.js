@@ -22,6 +22,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     menuButton.addEventListener('click', toggleMenu);
     document.addEventListener('click', outsideClick);
-    window.addEventListener('resize', closeMenu); // Close menu on window resize
+    window.addEventListener('resize', closeMenu); 
 });
 }
